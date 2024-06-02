@@ -6,7 +6,7 @@
 /*   By: dhasan <dhasan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 23:40:17 by dhasan            #+#    #+#             */
-/*   Updated: 2024/01/31 14:18:02 by dhasan           ###   ########.fr       */
+/*   Updated: 2024/06/02 17:59:58 by dhasan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*delete_line(char *save)
 	if (!save)
 		return (NULL);
 	i = ft_line_length(save);
-	new_s = (char *)malloc(sizeof(char) * (ft_strlen(save) - i + 1));
+	new_s = (char *)malloc(sizeof(char) * (ft_strlen_gnl(save) - i + 1));
 	if (!new_s)
 		return (NULL);
 	j = 0;
@@ -72,7 +72,7 @@ char	*read_data(int fd, char *save)
 	if (!buff)
 		return (NULL);
 	r_byte = 1;
-	while (!ft_strchr(save, '\n') && r_byte)
+	while (!ft_strchr_gnl(save, '\n') && r_byte)
 	{
 		r_byte = read(fd, buff, BUFFER_SIZE);
 		if (r_byte == -1)
@@ -82,7 +82,7 @@ char	*read_data(int fd, char *save)
 			return (NULL);
 		}
 		buff[r_byte] = '\0';
-		save = ft_strjoin(save, buff);
+		save = ft_strjoin_gnl(save, buff);
 	}
 	free(buff);
 	return (save);
