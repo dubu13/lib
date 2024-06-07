@@ -6,7 +6,7 @@
 #    By: dhasan <dhasan@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/31 19:41:34 by dhasan            #+#    #+#              #
-#    Updated: 2024/06/02 14:08:57 by dhasan           ###   ########.fr        #
+#    Updated: 2024/06/07 18:02:38 by dhasan           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,10 @@ LIBFT_SRCS = $(addprefix $(LIBFT_DIR)/, \
 		ft_isdigit.c ft_itoa.c ft_memcmp.c ft_memmove.c \
 		ft_putchar_fd.c ft_putnbr_fd.c ft_split.c ft_strdup.c \
 		ft_strjoin.c ft_strlcpy.c ft_strmapi.c ft_strnstr.c \
-		ft_strtrim.c ft_tolower.c ft_split.c)
+		ft_strtrim.c ft_tolower.c ft_split.c ft_lstnew.c ft_lstmap.c \
+		ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
+		ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c \
+		ft_lstiter.c)
 
 GNL_SRCS = $(addprefix $(GNL_DIR)/, \
 		get_next_line_bonus.c get_next_line_utils_bonus.c)
