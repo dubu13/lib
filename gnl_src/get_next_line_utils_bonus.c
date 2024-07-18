@@ -6,7 +6,7 @@
 /*   By: dhasan <dhasan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 23:40:40 by dhasan            #+#    #+#             */
-/*   Updated: 2024/06/02 18:00:59 by dhasan           ###   ########.fr       */
+/*   Updated: 2024/07/18 22:48:47 by dhasan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,8 @@ char	*ft_strjoin_gnl(char *save, char *buf)
 	}
 	if (!buf)
 		return (NULL);
-	str = malloc(sizeof(char) * ((ft_strlen_gnl(save) + ft_strlen_gnl(buf)) + 1));
+	str = malloc(sizeof(char) * ((ft_strlen_gnl(save) + \
+		ft_strlen_gnl(buf)) + 1));
 	if (str == NULL)
 		return (NULL);
 	i = -1;
